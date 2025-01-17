@@ -6,34 +6,44 @@
     <title>Perdóname</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: #f7f7f7;
+            background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+            color: #333;
             margin: 0;
             padding: 0;
         }
         .container {
-            margin-top: 10%;
+            padding: 20px;
+            margin-top: 5%;
         }
         h1 {
-            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h1 span {
+            color: #ff6b6b;
         }
         img {
-            width: 200px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
         }
         .buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 20px;
         }
         button {
-            padding: 15px 30px;
-            font-size: 16px;
+            padding: 15px 40px;
+            font-size: 18px;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .yes-btn {
             background-color: #4CAF50;
@@ -45,34 +55,45 @@
         }
         .yes-btn:hover {
             background-color: #45a049;
+            transform: scale(1.1);
         }
         .no-btn:hover {
             background-color: #e53935;
+            transform: scale(1.1);
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>¿Me perdonas? 🥺</h1>
-        <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="Perdón GIF">
+        <h1>¿Me perdonas? <span>🥺</span></h1>
+        <img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif" alt="Gatito triste">
+        <p>Sabes que no puedo estar sin ti. 🐾</p>
         <div class="buttons">
             <button class="yes-btn" id="yes-btn">Sí</button>
             <button class="no-btn" id="no-btn">No</button>
         </div>
     </div>
+    <footer>
+        Hecho con ❤️ por alguien que te quiere mucho.
+    </footer>
     <script>
         const yesBtn = document.getElementById("yes-btn");
         const noBtn = document.getElementById("no-btn");
-        let yesBtnSize = 16;
+        let yesBtnSize = 18;
 
         noBtn.addEventListener("click", () => {
-            yesBtnSize += 4; // Incrementa el tamaño de la fuente
+            yesBtnSize += 5; // Incrementa el tamaño de la fuente
             yesBtn.style.fontSize = yesBtnSize + "px";
             yesBtn.style.padding = `${yesBtnSize / 2}px ${yesBtnSize}px`;
         });
 
         yesBtn.addEventListener("click", () => {
-            alert("¡Gracias, amor! 💖");
+            alert("¡Gracias, amor! 💖 Prometo no volver a cometer errores.");
         });
     </script>
 </body>
