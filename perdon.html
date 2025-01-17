@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perdóname</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        .yes-btn:hover {
+            background-color: #45a049;
+        }
+        .no-btn:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Me perdonas? 🥺</h1>
+        <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="Perdón GIF">
+        <div class="buttons">
+            <button class="yes-btn" id="yes-btn">Sí</button>
+            <button class="no-btn" id="no-btn">No</button>
+        </div>
+    </div>
+    <script>
+        const yesBtn = document.getElementById("yes-btn");
+        const noBtn = document.getElementById("no-btn");
+        let yesBtnSize = 16;
+
+        noBtn.addEventListener("click", () => {
+            yesBtnSize += 4; // Incrementa el tamaño de la fuente
+            yesBtn.style.fontSize = yesBtnSize + "px";
+            yesBtn.style.padding = `${yesBtnSize / 2}px ${yesBtnSize}px`;
+        });
+
+        yesBtn.addEventListener("click", () => {
+            alert("¡Gracias, amor! 💖");
+        });
+    </script>
+</body>
+</html>
